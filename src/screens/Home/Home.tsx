@@ -7,9 +7,10 @@ import {useHome} from '../../hooks';
 
 import {styles} from './style';
 import {Loader} from './Loader';
+import {Error} from './Error';
 
 export function Home() {
-  const {data, isLoading, handleViewDetail} = useHome();
+  const {data, isLoading, error, handleViewDetail} = useHome();
 
   const renderItem = useCallback(
     ({item}: ListRenderItemInfo<CryptoCurrencies>) => (
@@ -17,9 +18,13 @@ export function Home() {
     ),
     [handleViewDetail],
   );
-
+  console.log('render');
   if (isLoading) {
     return <Loader />;
+  }
+
+  if (error && !isLoading) {
+    return <Error />;
   }
 
   return (

@@ -12,7 +12,7 @@ import {
 export function useHome() {
   const {navigate} = useNavigation<NavigationProp<CustomNavigationProps>>();
 
-  const {isLoading, data} = useQuery<CryptoCurrencies[]>({
+  const {isLoading, data, error, refetch} = useQuery<CryptoCurrencies[]>({
     queryKey: ['currencies'],
     queryFn: ({signal}) => queryCurrencies(signal!),
   });
@@ -24,5 +24,5 @@ export function useHome() {
     [navigate],
   );
 
-  return {isLoading, data, handleViewDetail};
+  return {isLoading, data, error, handleViewDetail, refetch};
 }

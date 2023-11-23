@@ -7,9 +7,23 @@ export const styles = StyleSheet.create({
   },
   loadingText: {
     fontSize: 28,
-    height: 60,
+  },
+  errorText: {
+    fontSize: 24,
   },
   containerLoader: {
     flex: 1,
+  },
+  buttonError: {
+    borderRadius: 60,
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 50,
+    backgroundColor: '#d3d3d3',
+    marginTop: 20,
+  },
+  textError: {
+    fontSize: 18,
+    opacity: 0.7,
   },
 });
