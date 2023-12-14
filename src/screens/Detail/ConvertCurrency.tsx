@@ -22,7 +22,7 @@ export function ConvertCurrency(props: PropsConvertCurrency) {
           style={styles.convertedText}
           numberOfLines={1}
           ellipsizeMode="tail">
-          Value to convert to COP ${memoValueCOP}
+          Value to convert to COP {memoValueCOP}
         </Text>
       </View>
     </View>

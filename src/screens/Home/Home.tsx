@@ -18,7 +18,6 @@ export function Home() {
     ),
     [handleViewDetail],
   );
-  console.log('render');
   if (isLoading) {
     return <Loader />;
   }

@@ -1,7 +1,7 @@
-import { URL } from './constants';
+import {URL} from './constants';
 
 export const queryCurrencies = (signal: AbortSignal) =>
-  fetch(`${URL}`, { signal }).then(res => {
+  fetch(`${URL}`, {signal}).then(res => {
     if (!res.ok) {
       throw new Error('Failed to fetch');
     }
@@ -12,7 +12,7 @@ export function cryptoConvertToLocalCOP(props: {
   amount: string;
   priceCoinUSD: number;
 }) {
-  const { amount, priceCoinUSD } = props;
+  const {amount, priceCoinUSD} = props;
 
   const COPtoUSD = 4066;
 
